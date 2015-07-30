@@ -7,7 +7,7 @@ use \DocumentTagReplacer\DocumentTagReplacerFactory;
 /**
  * @var $replacer DocumentTagReplacerInterface
  */
-$replacer = \DocumentTagReplacer\DocumentTagReplacerFactory::getReplacerInstance(DocumentTagReplacerFactory::TYPE_WORD);
+$replacer = DocumentTagReplacerFactory::getReplacerInstance(DocumentTagReplacerFactory::TYPE_WORD);
 
 $tagsToReplace = [
 	'{{tag1}}' => 'Replace 1',
@@ -16,5 +16,10 @@ $tagsToReplace = [
 ];
 
 //www-data or any other user needs write privileges in example directory!
-$currentDir = __DIR__.DIRECTORY_SEPARATOR;
-$replacer::replaceTags($currentDir.'example.docx', $tagsToReplace, $currentDir.'example_replaced.docx');
+$result = $replacer::replaceTags('example.docx', $tagsToReplace, 'example_replaced.docx');
+
+if ($result) {
+	echo 'Saved new file '. $result;
+} else {
+	echo 'Error, unable to save result';
+}

@@ -9,7 +9,7 @@ Built with PHPWord.
 Specify array of tags and corresponding values. The values are then replaced for the tags in the given document.
 
 ```php
-$replacer = \DocumentTagReplacer\DocumentTagReplacerFactory::getReplacerInstance(DocumentTagReplacerFactory::TYPE_WORD);
+$replacer = DocumentTagReplacerFactory::getReplacerInstance(DocumentTagReplacerFactory::TYPE_WORD);
 
 $tagsToReplace = [
 	'{{tag1}}' => 'Replace 1',
@@ -17,6 +17,5 @@ $tagsToReplace = [
 	'{{tag3}}' => 'Replace 3',
 ];
 
-$currentDir = __DIR__.DIRECTORY_SEPARATOR;
-$replacer::replaceTags($currentDir.'example.docx', $tagsToReplace, $currentDir.'example_replaced.docx');
+$replacer::replaceTags('example.docx', $tagsToReplace, 'example_replaced.docx');
 ```
