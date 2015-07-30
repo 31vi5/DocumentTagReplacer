@@ -1,3 +1,5 @@
 # DocumentTagReplacer
 
-PHP library that can replace tags in documents, currently only doc and docx files. Built upon PHPWord.
+PHP library that can replace tags in documents, currently only docx files. 
+
+Built with PHPWord.
