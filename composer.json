@@ -1,0 +1,12 @@
+{
+	"name" : "31vi5/DocumentTagReplacer",
+	"version" : "0.0.1",
+	"require": {
+		"phpoffice/phpword": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"DocumentTagReplacer\\": "src"
+		}
+	}
+}
