@@ -16,4 +16,5 @@ $tagsToReplace = [
 ];
 
 //www-data or any other user needs write privileges in example directory!
-$replacer::replaceTags(__DIR__.DIRECTORY_SEPARATOR.'example.docx', $tagsToReplace, __DIR__.DIRECTORY_SEPARATOR.'example_replaced.docx');
+$currentDir = __DIR__.DIRECTORY_SEPARATOR;
+$replacer::replaceTags($currentDir.'example.docx', $tagsToReplace, $currentDir.'example_replaced.docx');
