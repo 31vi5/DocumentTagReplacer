@@ -17,5 +17,6 @@ $tagsToReplace = [
 	'{{tag3}}' => 'Replace 3',
 ];
 
-$replacer::replaceTags(__DIR__.DIRECTORY_SEPARATOR.'example.docx', $tagsToReplace, __DIR__.DIRECTORY_SEPARATOR.'example_replaced.docx');
+$currentDir = __DIR__.DIRECTORY_SEPARATOR;
+$replacer::replaceTags($currentDir.'example.docx', $tagsToReplace, $currentDir.'example_replaced.docx');
 ```
