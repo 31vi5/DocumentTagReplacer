@@ -9,7 +9,7 @@ Built with PHPWord.
 Specify array of tags and corresponding values. The values are then replaced for the tags in the given document.
 
 ```php
-$replacer = DocumentTagReplacerFactory::getReplacerInstance(DocumentTagReplacerFactory::TYPE_WORD);
+$replacer = DocumentTagReplacerFactory::getReplacer(DocumentTagReplacerFactory::TYPE_WORD);
 
 $tagsToReplace = [
 	'{{tag1}}' => 'Replace 1',
