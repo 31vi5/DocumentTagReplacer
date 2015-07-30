@@ -24,7 +24,7 @@ class DocumentTagReplacerFactory {
 		self::TYPE_WORD
 	];
 
-	public static function getReplacerInstance($type) {
+	public static function getReplacer($type) {
 		if (!self::isSupportedType($type)) {
 			throw new UnsupportedFileTypeException();
 		}
@@ -35,7 +35,6 @@ class DocumentTagReplacerFactory {
 				break;
 			default:
 				throw new Exception('This shouldn\'t happen');
-				break;
 		}
 
 		return $class;

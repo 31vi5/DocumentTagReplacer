@@ -7,7 +7,7 @@ use \DocumentTagReplacer\DocumentTagReplacerFactory;
 /**
  * @var $replacer DocumentTagReplacerInterface
  */
-$replacer = DocumentTagReplacerFactory::getReplacerInstance(DocumentTagReplacerFactory::TYPE_WORD);
+$replacer = DocumentTagReplacerFactory::getReplacer(DocumentTagReplacerFactory::TYPE_WORD);
 
 $tagsToReplace = [
 	'{{tag1}}' => 'Replace 1',
