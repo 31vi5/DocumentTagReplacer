@@ -1,5 +1,5 @@
 {
-	"name" : "31vi5/DocumentTagReplacer",
+	"name" : "31vi5/document_tag_replacer",
 	"version" : "0.0.1",
 	"require": {
 		"phpoffice/phpword": "dev-master"
