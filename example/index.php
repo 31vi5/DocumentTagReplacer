@@ -15,9 +15,14 @@ $tagsToReplace = [
 	'{{tag3}}' => 'Replace 3',
 ];
 
-//www-data or any other user needs write privileges in example directory!
-$result = $replacer::replaceTags('example.docx', $tagsToReplace, 'example_replaced.docx');
+$originalFile = 'example.docx';
+$replacedFile = preg_replace('/\.docx/', '_replaced.docx', $originalFile);
 
+//www-data or any other user needs write privileges in example directory!
+$result = $replacer::replaceTags($originalFile, $tagsToReplace, $replacedFile);
+
+echo date('Y-m-d H:i:s');
+echo PHP_EOL;
 if ($result) {
 	echo 'Saved new file '. $result;
 } else {
