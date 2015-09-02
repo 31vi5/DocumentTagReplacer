@@ -22,7 +22,7 @@ class WordTagReplacer implements DocumentTagReplacerInterface {
 		$document = $phpWord->loadTemplate($originalFilePath);
 
 		foreach ($tagValues as $tag => $value) {
-			$document->setValue($tag, $value);
+			$document->setValue($tag, htmlspecialchars($value));
 		}
 
 		$document->saveAs($newFilePath);
