@@ -1,11 +1,9 @@
 <?php
 
-
 namespace DocumentTagReplacer;
 
 use DocumentTagReplacer\WordTagReplacer;
-
-
+use DocumentTagReplacer\Exception\UnsupportedFileTypeException;
 
 /**
  * Creates instance of document tag replacer based on file type
@@ -31,7 +29,7 @@ class DocumentTagReplacerFactory {
 
 		switch ($type) {
 			case self::TYPE_WORD:
-				$class = \DocumentTagReplacer\WordTagReplacer::class;
+				$class = WordTagReplacer::class;
 				break;
 			default:
 				throw new Exception('This shouldn\'t happen');

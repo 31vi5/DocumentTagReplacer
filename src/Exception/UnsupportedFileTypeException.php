@@ -7,12 +7,13 @@ namespace DocumentTagReplacer\Exception;
  *
  * @author 31vi5
  */
-class UnsupportedFileTypeException extends \Exception {
+class UnsupportedFileTypeException extends DocumentReplacerException {
+
+	protected $code = 400;
 
 	public function __construct() {
 		$message = 'Unsupported file type';
-		$code = 400;
-		parent::__construct($message, $code);
+		parent::__construct($message);
 	}
 
 }
